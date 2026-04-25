@@ -1,0 +1,9 @@
+gradio
+torch
+transformers>=4.57.0
+peft
+accelerate
+bitsandbytes
+pandas
+openpyxl
+safetensors

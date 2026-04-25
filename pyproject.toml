@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-correcting-sql-data-analyst"
+version = "0.1.0"
+description = "Agentic SQL/data analyst using Qwen3 + LoRA + SQLite execution and self-correction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "gradio",
+  "torch",
+  "transformers>=4.57.0",
+  "peft",
+  "accelerate",
+  "bitsandbytes",
+  "pandas",
+  "openpyxl",
+  "safetensors",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
