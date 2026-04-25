@@ -4,9 +4,9 @@ A GitHub-ready version of the SQL analyst project: a fine-tuned Qwen3-based text
 
 ## Links
 
-- Live Demo: `REPLACE_WITH_YOUR_HF_SPACE_URL`
-- Model Adapter: `REPLACE_WITH_YOUR_HF_MODEL_REPO_URL`
-- Kaggle Training Notebook: `REPLACE_WITH_YOUR_KAGGLE_NOTEBOOK_URL`
+- Live Demo: `https://huggingface.co/spaces/Monish-K/Self-Correcting-SQL-Agent`
+- Model Adapter: `Monish-K/qwen-3-4b-instruct-lora-sql-agent`
+- Kaggle Training Notebook: `https://www.kaggle.com/code/monishmoni/notebook4f987e02fb/edit`
 
 ## What this project does
 
@@ -60,39 +60,10 @@ export SQL_AGENT_ADAPTER=your-username/your-adapter-repo
 python app.py
 ```
 
-## Hugging Face Space
-
-For Spaces, set these variables/secrets:
-
-- `SQL_AGENT_BASE_MODEL`
-- `SQL_AGENT_ADAPTER`
-- `HF_TOKEN` (optional, recommended)
-
-## Metrics
-
-Replace this section with the values from your Kaggle `metrics.json`.
-
-```json
-REPLACE_WITH_YOUR_METRICS_JSON
-```
-
-## Example output
-
-Replace this with a good `sample_report.json` example from Kaggle.
-
-```json
-REPLACE_WITH_YOUR_SAMPLE_REPORT_JSON
-```
 
 ## Screenshots
 
-Add screenshots to `screenshots/` and embed them here. Good options:
-
-- Space home page
-- Good query result
-- Retry / self-correction trace
-- Uploaded CSV / Excel example
-- Architecture diagram
+![Use Case](/screenshots/use_case_example_csv.png)
 
 ## Future improvements
 
