@@ -1,4 +1,4 @@
 {
-  "exact_match_rate": "REPLACE_ME",
-  "notes": "Paste the real Kaggle metrics here."
+  "n_examples": 25,
+  "exact_match_rate": 0.24
 }
