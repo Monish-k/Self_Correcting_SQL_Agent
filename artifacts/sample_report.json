@@ -1,6 +1,39 @@
 {
-  "question": "REPLACE_ME",
-  "final_sql": "REPLACE_ME",
-  "summary": "REPLACE_ME",
-  "trace": []
+  "question": "Show total revenue by city.",
+  "final_sql": "SELECT T1.city, SUM(T4.unit_price) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id JOIN order_items AS T3 ON T2.order_id = T3.order_id JOIN products AS T4 ON T3.product_id = T4.product_id GROUP BY T1.city",
+  "summary": "Bengaluru generated the highest revenue at $2000, followed by Chennai ($140) and Mumbai ($100).",
+  "result": {
+    "columns": [
+      "city",
+      "SUM(T4.unit_price)"
+    ],
+    "rows": [
+      [
+        "Bengaluru",
+        2000.0
+      ],
+      [
+        "Chennai",
+        140.0
+      ],
+      [
+        "Mumbai",
+        100.0
+      ]
+    ]
+  },
+  "trace": [
+    {
+      "step": "draft_sql",
+      "sql": "SELECT T1.city, SUM(T3.unit_price) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id JOIN order_items AS T3 ON T2.order_id = T3.order_id JOIN products AS T4 ON T3.product_id = T4.product_id GROUP BY T1.city"
+    },
+    {
+      "step": "execution_error",
+      "error": "no such column: T3.unit_price"
+    },
+    {
+      "step": "repair_1",
+      "sql": "SELECT T1.city, SUM(T4.unit_price) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id JOIN order_items AS T3 ON T2.order_id = T3.order_id JOIN products AS T4 ON T3.product_id = T4.product_id GROUP BY T1.city"
+    }
+  ]
 }
